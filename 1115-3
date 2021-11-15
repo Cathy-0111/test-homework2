@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int main(){
+	int n1,n2;
+    scanf("%d%d",&n1,&n2);
+   int f[n1];
+   int g[n2];
+    for(int i=0;i<n1;i++){
+        int a;
+        scanf("%d",&a);
+        f[i]=a;
+    }
+	
+    for(int j=0;j<n2;j++){
+        int b;
+        scanf("%d",&b);
+        g[j]=b;
+    }
+    
+    int m=0,a=0;
+    for(int k=0;k<n1;k++){
+        for(int l=0;l<n2;l++){
+            if(f[k]==g[l]&&f[k]!=a){
+                m++;
+                a=f[k];
+            }
+        }
+    }
+
+
+    printf("%d",m);
+}
