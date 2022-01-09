@@ -1,0 +1,38 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+    for (size_t i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    int m;
+    scanf("%d", &m);
+    int *ptr;
+    ptr = &arr;
+    int flag;
+    for (size_t i = 0; i < n; i++)
+    {
+
+        if (*(ptr + i) == m)
+        {
+            printf("%d position.", i + 1);
+            flag = 1;
+            break;
+        }
+        else
+        {
+            flag = 0;
+        }
+    }
+
+    if (flag == 0)
+    {
+        printf("none");
+    }
+}
